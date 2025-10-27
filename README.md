@@ -9,6 +9,7 @@ A lightweight terminal-based chat client for GPT-powered platforms (OpenAI or De
 * Generate conversation aliases automatically.
 * Stream GPT responses in real-time.
 * Supports multiple platforms (OpenAI GPT and Deepseek).
+* Platform expnsion possible, as long as it's compatible with "openai" library.
 * Configurable maximum token limit per conversation.
 
 ---
@@ -36,7 +37,7 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-4. **Set API keys** in a `.env` file in the project root:
+4. **Set API keys** in a `.env` file in the project root (one profile required to work only):
 
 ```
 OPENAI_API_KEY=your_openai_api_key
