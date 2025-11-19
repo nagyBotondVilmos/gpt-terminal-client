@@ -1,0 +1,56 @@
+[
+  {
+    "name": "get_weather",
+    "description": "Get weather for a city",
+    "import_path": "tools.get_weather.get_weather",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "location": {"type": "string", "description": "City name"}
+      },
+      "required": ["location"]
+    }
+  },
+  {
+    "name": "calculate",
+    "description": "Perform a mathematical expression. USE PYTHON SYNTAX FOR OPERATIONS!!!",
+    "import_path": "tools.calculate.calculate",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "expression": {
+          "type": "string",
+          "description": "Arithmetic expression."
+        }
+      },
+      "required": ["expression"]
+    }
+  },
+  {
+    "name": "copy_files_plan",
+    "description": "Generate a plan for copying files (human-readable + command) before executing",
+    "import_path": "tools.copy_files.copy_files_plan",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "source": {"type": "string", "description": "Path to copy from"},
+        "destination": {"type": "string", "description": "Path to copy to"},
+        "plan_id": {"type": "string", "description": "Optional plan ID for tracking"}
+      },
+      "required": ["source", "destination"]
+    }
+  },
+  {
+    "name": "copy_files_execute",
+    "description": "Execute a previously generated copy plan",
+    "import_path": "tools.copy_files.copy_files_execute",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "plan_id": {"type": "string", "description": "ID of the plan to execute"},
+        "approve": {"type": "boolean", "description": "Whether to approve execution"}
+      },
+      "required": ["plan_id"]
+    }
+  }
+]
